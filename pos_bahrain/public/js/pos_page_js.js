@@ -1,8 +1,8 @@
 erpnext.pos.PointOfSale = erpnext.pos.PointOfSale.extend({
 	onload: function () {
 		this._super();
-		this.reset_customer_local_storage();
-		this.add_new_doc_event();
+		//this.reset_customer_local_storage();
+		//this.add_new_doc_event();
 		//this.add_phone_validator();
 		this.setinterval_to_sync_master_data(600000);
 	},
@@ -855,7 +855,7 @@ erpnext.pos.PointOfSale = erpnext.pos.PointOfSale.extend({
 		}
 	},*/
 
-	add_new_doc_event: function () {
+	/*add_new_doc_event: function () {
 		document.addEventListener("click", function (event) {
 			var element = event.target;
 			if (element.classList.contains("new_doc")) {
@@ -876,9 +876,9 @@ erpnext.pos.PointOfSale = erpnext.pos.PointOfSale.extend({
 				});
 			}
 		});
-	},
+	},*/
 
-	reset_customer_local_storage: function () {
+	/*reset_customer_local_storage: function () {
 		localStorage.setItem("address_line1", "");
 		localStorage.setItem("address_line2", "");
 		localStorage.setItem("contact", "");
@@ -890,7 +890,7 @@ erpnext.pos.PointOfSale = erpnext.pos.PointOfSale.extend({
 				localStorage.setItem("customer_name", r.message.customer_name);
 			}
 		});
-	}
+	}*/
 });
 
 

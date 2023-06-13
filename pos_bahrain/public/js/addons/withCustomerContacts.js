@@ -10,10 +10,10 @@ export default function withCustomerContacts(Pos) {
         super.make_customer();
         const me = this;
         me.party_field.$input.on('awesomplete-select', function (e) {
-          console.log(e.originalEvent.text.value);
+          //console.log(e.originalEvent.text.value);
 
           //Fetch address line 1 and 2
-          frappe.call({
+          /*frappe.call({
             method: "pos_bahrain.api.get_customer_details.get_customer_address",
             args: {
               customer_name: e.originalEvent.text.value
@@ -44,10 +44,10 @@ export default function withCustomerContacts(Pos) {
             callback: (r) => {
               localStorage.setItem("customer_name", r.message.customer_name);
             }
-          });
+          });*/
 
-          //const customer = e.originalEvent.text.value;
-          //me.frm.doc.phone = me.customer_contacts[customer] || '';
+          const customer = e.originalEvent.text.value;
+          me.frm.doc.phone = me.customer_contacts[customer] || '';
         });
       }
     };
